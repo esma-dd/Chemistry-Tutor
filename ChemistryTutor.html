@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FREELANCE CHEMISTRY TUTORING</title>
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorProject </title>
 
+    <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -52,7 +52,6 @@
       padding: 0;
     }
 
-
     .subjects li {
       background: #f0f0f0;
       margin: 5px 0;
@@ -61,192 +60,204 @@
     }
 
     .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
-
-    .gallery-item {
-      text-align: center;
-    }
-
     .gallery-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
+      width: 200px;
       cursor: pointer;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
+      border-radius: 5px;
     }
-
-    .gallery-item img:hover {
-      transform: scale(1.05);
-    }
-
-    .caption {
-      margin-top: 8px;
-      font-size: 0.95em;
-      color: #555;
-    }
-
-    /* Lightbox styles */
     .lightbox {
       display: none;
       position: fixed;
       z-index: 1000;
-      padding: 20px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.85);
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
     }
-
     .lightbox-img {
       display: block;
-      margin: 60px auto 10px auto;
+      margin: 80px auto 10px;
       max-width: 90%;
       max-height: 80vh;
-      border-radius: 8px;
     }
-
-    .lightbox-caption {
-      text-align: center;
-      color: #fff;
-      font-size: 1.1em;
-    }
-
-    .close {
+    .prev, .next, .close {
       position: absolute;
-      top: 20px;
-      right: 35px;
-      color: #fff;
+      color: white;
       font-size: 40px;
       font-weight: bold;
       cursor: pointer;
+      user-select: none;
     }
+    .prev { top: 50%; left: 40px; }
+    .next { top: 50%; right: 40px; }
 
-
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding: 40px 10px;
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
       }
-      nav {
-        font-size: 14px;
+
+      footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
       }
-    }
-  </style>
+
+      @media (max-width: 600px) {
+        header {
+          padding: 40px 10px;
+        }
+        nav {
+          font-size: 14px;
+        }
+      }
+    </style>
 </head>
+
 <body>
+    <header>
+      <h1>FREELANCE CHEMISTRY TUTORING</h1>
+      <p>Private, individual, online lecture sessions with aid of educational software in either Turkish or English</p>
+    </header>
 
-  <header>
-    <h1>FREELANCE CHEMISTRY TUTORING</h1>
-    <p>Private, individual, online lecture sessions with aid of educational software in either Turkish or English</p>
-  </header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#subjects">Subjects</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <section id="about">
+      <h2>About Me</h2>
+      <p style="text-indent:10px;">  Hello! I'm Esma Dede. I am graduated from Boğaziçi University and I have BS degree in chemistry. </p> 
+      <p style="text-indent:10px;"> I have tutored several chemistry topics online in English and Turkish using software. I used office programs and chemistry software to deliver lectures. I can easily draw chemical structures, diagrams and write scientific/mathematical symbols to illustrate better and to enhance the quality of learning experience.</p>
+      <p style="text-indent:10px;"> I designed original practice questions so I am competent to comprehend kernel of chemistry topics thereby to generate original questions to reinforce learning.</p>
+      <p style="text-indent:10px;"> I worked with university students mostly hence I never had a conundrum to understand advance chemistry topics and to deliver chemistry topics easily and succinctly.</p>
+      <p style="text-indent:10px;"> Feel free to contact me anytime to ask about my tutoring services, arrange date and time of lecture session.</p>
+    </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p style="text-indent:10px;">  Hello! I'm Esma Dede. I am graduated from Boğaziçi University and I have BS degree in chemistry. </p> 
-    <p style="text-indent:10px;"> I have tutored several chemistry topics online in English and Turkish using software. I used office programs and chemistry software to deliver lectures. I can easily draw chemical structures, diagrams and write scientific/mathematical symbols to illustrate better and to enhance the quality of learning experience.</p>
-    <p style="text-indent:10px;"> I designed original practice questions so I am competent to comprehend kernel of chemistry topics thereby to generate original questions to reinforce learning.</p>
-    <p style="text-indent:10px;"> I worked with university students mostly hence I never had a conundrum to understand advance chemistry topics and to deliver chemistry topics easily and succinctly.</p>
-    <p style="text-indent:10px;"> Feel free to contact me anytime to ask about my tutoring services, arrange date and time of lecture session.</p>
-  </section>
+    <section id="subjects" class="subjects">
+      <h2>Subjects Offered</h2>
+      <ul>
+        <li>General Chemistry</li>
+        <li>Organic Chemistry</li>
+        <li>Physical & Quantum Chemistry</li>
+        <li>Highschool Chemistry</li>
+      </ul>
+    </section>
 
-  <section id="subjects" class="subjects">
-    <h2>Subjects Offered</h2>
-    <ul>
-      <li>General Chemistry</li>
-      <li>Organic Chemistry</li>
-      <li>Physical & Quantum Chemistry</li>
-      <li>Highschool Chemistry</li>
-    </ul>
-  </section>
+    <section id="gallery">
+      <h2>Snapshots From Online Lectures</h2>
+      <div class="gallery-grid">
+     <div class="gallery-item">
+        <img src="2025-10-03 12-16-26.png" alt="Elimination reactions" onclick="openLightbox(this)">
+        <p class="caption">Elimination reactions</p>
+      </div>
 
+      <div class="gallery-item">
+        <img src="2025-10-03 13-35-51.png" alt="Chemical reactions" onclick="openLightbox(this)">
+        <p class="caption">Chemical reactions</p>
+      </div>
 
-  <section id="gallery">
-  <h2>Snapshots From Online Lectures</h2>
-  <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="2025-10-03 23-07-17.png" alt="Normalization of wavefunction" onclick="openLightbox(this)">
+        <p class="caption">Normalization of wavefunction</p>
+      </div>
 
-    <div class="gallery-item">
-      <img src="2025-10-03 12-16-26.png" alt="Elimination reactions" onclick="openLightbox(this)">
-      <p class="caption">Elimination reactions</p>
+      <div class="gallery-item">
+        <img src="2025-10-03 13-35-38.png" alt="Molecular orbital diagram" onclick="openLightbox(this)">
+        <p class="caption">Molecular orbital diagram</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="2025-10-03 13-36-23.png" alt="Bond order of heteronuclear diatomic molecules" onclick="openLightbox(this)">
+        <p class="caption">Bond order of heteronuclear diatomic molecules</p>
+      </div>
+      </div>
+    </section>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close" id="closeBtn">&times;</span>
+      <img class="lightbox-img" id="lightbox-img">
+      <p id="lightbox-caption" style="text-align:center; color:white;"></p>
+      <span class="prev" id="prev">&#10094;</span>
+      <span class="next" id="next">&#10095;</span>
     </div>
 
-    <div class="gallery-item">
-      <img src="2025-10-03 13-35-51.png" alt="Chemical reactions" onclick="openLightbox(this)">
-      <p class="caption">Chemical reactions</p>
-    </div>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>📞 (+90) 546 280 61 51</p>
+      <p>📧 <a href="esmadd2024@gmail.com">esmadd2024@gmail.com</a></p>
+      <p>🔗 <a href="https://linkedin.com/in/esma-dede-3381731a3" target="_blank" rel="noopener noreferrer">Linkedin</a></p>
+      <p>📍 İstanbul, Türkiye</p>
+    </section>
 
-    <div class="gallery-item">
-      <img src="2025-10-03 23-07-17.png" alt="Normalization of wavefunction" onclick="openLightbox(this)">
-      <p class="caption">Normalization of wavefunction</p>
-    </div>
+    <footer>
+      <p>&copy; 2025 Freelance Tutoring Services. All rights reserved.</p>
+    </footer>
 
-    <div class="gallery-item">
-      <img src="2025-10-03 13-35-38.png" alt="Molecular orbital diagram" onclick="openLightbox(this)">
-      <p class="caption">Molecular orbital diagram</p>
-    </div>
-
-    <div class="gallery-item">
-      <img src="2025-10-03 13-36-23.png" alt="Bond order of heteronuclear diatomic molecules" onclick="openLightbox(this)">
-      <p class="caption">Bond order of heteronuclear diatomic molecules</p>
-    </div>
-
-  </div>
-
-  <!-- Lightbox Modal -->
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span class="close">&times;</span>
-    <img class="lightbox-img" id="lightbox-img">
-    <p class="lightbox-caption" id="lightbox-caption"></p>
-  </div>
-</section>
-
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>📞 (+90) 546 280 61 51</p>
-    <p>📧 <a href="esmadd2024@gmail.com">esmadd2024@gmail.com</a></p>
-    <p>🔗 <a href="https://linkedin.com/in/esma-dede-3381731a3" target="_blank" rel="noopener noreferrer">Linkedin</a></p>
-    <p>📍 İstanbul, Türkiye</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Freelance Tutoring Services. All rights reserved.</p>
-  </footer>
 
 <script>
-  function openLightbox(img) {
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    const lightboxCaption = document.getElementById("lightbox-caption");
+    document.addEventListener("DOMContentLoaded", function() {
+      const images = [
+        "2025-10-03 12-16-26.png",
+        "2025-10-03 13-35-51.png",
+        "2025-10-03 23-07-17.png",
+        "2025-10-03 13-35-38.png",
+        "2025-10-03 13-36-23.png" 
+    ];
+      const captions = [
+        "Elimination reactions",
+        "Chemical reactions",
+        "Normalization of wavefunction",
+        "Molecular orbital diagram",
+        "Bond order of heteronuclear diatomic molecules"
+      ];
 
-    lightbox.style.display = "block";
-    lightboxImg.src = img.src;
-    lightboxCaption.textContent = img.alt;
-  }
+      let slideIndex = 0;
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const caption = document.getElementById("lightbox-caption");
+      const prev = document.getElementById("prev");
+      const next = document.getElementById("next");
+      const closeBtn = document.getElementById("closeBtn");
 
-  function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-  }
+      function showSlide(n) {
+        if (n >= images.length) slideIndex = 0;
+        if (n < 0) slideIndex = images.length - 1;
+        lightboxImg.src = images[slideIndex];
+        caption.textContent = captions[slideIndex];
+      }
+
+      // make available globally
+      window.openLightbox = function(img) {
+        console.log("Clicked:", img.src);
+        const filename = img.getAttribute("src").split("/").pop();
+        slideIndex = images.findIndex(name => name === filename);
+        if (slideIndex === -1) slideIndex = 0;
+        showSlide(slideIndex);
+        lightbox.style.display = "block";
+      };
+
+      function closeLightbox() {
+        lightbox.style.display = "none";
+      }
+
+      prev.addEventListener("click", e => { e.stopPropagation(); slideIndex--; showSlide(slideIndex); });
+      next.addEventListener("click", e => { e.stopPropagation(); slideIndex++; showSlide(slideIndex); });
+      closeBtn.addEventListener("click", e => { e.stopPropagation(); closeLightbox(); });
+      lightbox.addEventListener("click", closeLightbox);
+    });
 </script>
-
 </body>
 </html>
+
+});
