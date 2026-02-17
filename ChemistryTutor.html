@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChemistryTutor</title>
 
+    <link rel="alternate" hreflang="en" href="https://esma-dd.github.io/Chemistry-Tutor/ChemistryTutor.html">
+    <link rel="alternate" hreflang="tr" href="https://esma-dd.github.io/Chemistry-Tutor/ChemistryTutor.html">
+
     <style>
     body {
       font-family: Arial, sans-serif;
@@ -127,6 +130,7 @@
     <header>
         <h1>FREELANCE CHEMISTRY TUITION</h1>
         <p>Private, individual, online lecture sessions with aid of educational software in either Turkish or English</p>
+        <button onclick="goToTurkish()">Türkçe</button>
     </header>
 
     <nav>
@@ -363,6 +367,11 @@
           closeBtn.addEventListener("click", e => { e.stopPropagation(); closeLightbox(); });
           lightbox.addEventListener("click", closeLightbox);
         });
+
+          function goToTurkish() {
+            window.location.href = "https://esma-dd.github.io/Chemistry-Tutor/KimyaÖzelDers.html";
+          }
+
     </script>
 
 </body>
